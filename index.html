@@ -1,0 +1,225 @@
+<!-- CSS ANIMATION 01: 
+- [] faça o quadrado ir de um lado para o outro na página. Fazer ele ficar parado
+no ponto oposto ao início.
+- [] Reverta a animação
+- [] faça o quadrado ir e voltar ao ponto inicial
+- [] fazer o quadrado animar sem fim
+- início e fim: 0% 100%, from to
+- linha do tempo
+- '@keyframes' nomedaanimação
+- Quantas vezes a animação irá acontecer; (ex: infinita ou 2)
+- fazer a animação começar depois depois de x tempo
+- cubic-bezier (x1,y1,x2,y2)
+- ease/ ease-in/ ease-out/ ease-in-out/ linear/ step
+- Iniciar ou pausar uma animação (hover)
+- multiplas animações (blink)
+- shorthand
+- Tudo foi feito com o animation-play-state
+
+
+- 1. animation-name 
+- 2. Duration-name
+- 3. Animation-fill-mode
+- 4. Animation-direction: alternate;
+- 5. Animation-iteration-count: infinite;
+- 6. Animation-delay: 2;
+- 7. Animation-timing-function: step(10);
+EXEMPLO: Lembrar de colocar no html: .square (enter), No CSS FICA: body {
+  background-color: mediumpurple;
+}
+
+.square {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  opacity: .6;
+}
+
+.square {
+  animation-name: move, blink;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.square:hover {
+  animation-play-state: paused;
+}
+
+@keyframes move {
+
+  0% {
+
+  }
+
+  100% {
+    transform: translateX(calc(100vw - 100% - 16px));
+  }
+
+  @keyframes blink {
+  0%, 100% {
+    opacity: .6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+}-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Discriminação</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div id="app">
+    <header class="container">
+      <nav>
+        <img class="logo" src="./assets/camera.svg" alt="Imagem da logomarca">
+
+        <ul>
+          <li>Fale conosco</li>
+          <li class="active">Disque denúncia</li>
+        </ul>
+      </nav>
+
+      <form>
+        <div class="input-wrapper">
+          <label for="search">Pesquise por denúncias</label>
+          <input id="search" type="text" placeholder="Pesquise por denúncias">
+        </div>
+      </form>
+
+      <img class="avatar" src="c:\Users\ACER\OneDrive\Documentos\Documentos\Foto - João Samuel Mota.jpg" alt="imagem de Samuel">
+
+    </header>
+    <main>
+      <div class="container">
+        <h1>Página Inicial</h1>
+
+        <section class="gallerry">
+
+          <figure class="item " style="--delay:.2s">
+            <img src="./assets/01.jpg" alt="pessoa com uma mão cobrindo a boca">
+
+            <figcaption class="details">
+              <h2>DISCRIMINAÇÃO RACIAL</h2>
+              <div class="tags">
+                <span>Clique aqui</span>
+              </div>
+            </figcaption>
+
+          </figure>
+
+          <figure class="item" style="--delay:.4s">
+            <img src="./assets/02.jpg" alt="uma foto com varias religiões">
+
+            <figcaption class="details">
+              <h2>DISCRIMINAÇÃO RELIGIOSA</h2>
+              <div class="tags">
+                <span>Clique aqui</span>
+              </div>
+            </figcaption>
+
+          </figure>
+
+          <figure class="item" style="--delay:.6s">
+            <img src="./assets/03.jpg" alt="imamge com varias pessoas juntas com coração">
+
+            <figcaption class="details">
+              <h2>DISCRIMINAÇÃO SEXUAL</h2>
+              <div class="tags">
+                <span>Clique aqui</span>
+              </div>
+            </figcaption>
+
+          </figure>
+
+          <figure class="item" style="--delay:.8s">
+            <img src="./assets/04.jpg" alt="Um computador com duas tela">
+
+            <figcaption class="details">
+              <h2>DISCRIMINAÇÃO DEFICIÊNCIA</h2>
+              <div class="tags">
+                <span>Clique aqui</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="item" style="--delay:1s">
+            <img src="./assets/05.jpg" alt="um setup de escritor">
+
+            <figcaption class="details">
+              <h2>Setup de escritor</h2>
+              <div class="tags">
+                <span>Tag</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="item" style="--delay:1.2s">
+            <img src="./assets/06.jpg" alt="Um computador com varias cores na tela">
+
+            <figcaption class="details">
+              <h2>Ergonomia e cores</h2>
+              <div class="tags">
+                <span>Tag</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="item" style="--delay:1.4s">
+            <img src="./assets/07.jpg" alt="Mesa de escritorio com um computador">
+
+            <figcaption class="details">
+              <h2>Organização e grids</h2>
+              <div class="tags">
+                <span>Tag</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="item" style="--delay:1.6s">
+            <img src="./assets/08.jpg" alt="Computador com um tablet">
+
+            <figcaption class="details">
+              <h2>Show de luzes</h2>
+              <div class="tags">
+                <span>Tag</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="item" style="--delay:1.8s">
+            <img src="./assets/09.jpg" alt="Mesa com um computador, tablet e celular">
+
+            <figcaption class="details">
+              <h2>Organização e grids</h2>
+              <div class="tags">
+                <span>Tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          
+        </section>
+      </div>
+    </main>
+    <footer class="container">
+      <p>© 2024 - Portal Discriminação</p>
+    </footer>
+  </div>  
+</body>
+</html>
